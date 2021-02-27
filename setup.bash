@@ -10,5 +10,7 @@ if [ -f ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc.bak
 fi
 
+rm -rf ~/.vim_runtime
+
 cp .vimrc ~/.vimrc
 cp vim_runtime ~/.vim_runtime -r

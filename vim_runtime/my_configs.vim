@@ -1,20 +1,23 @@
-if has("autocmd")
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
-  augroup END
-endif
-" LINE NUMBERS
-" show line numbers
+" LINE NUMBERS - show line numbers
 set number
 
-"Backups
-"Keep backups in the ~/.backups dir
+" indentation linux kernel style
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
+set cindent
+
+""since python seems stubborn
+"filetype plugin on
+"filetype indent on
+"augroup python
+"    autocmd!
+"    autocmd FileType python setlocal ts=8 sts=8 sw=8 noet
+"augroup end
+
+
+"Backups - Keep backups in the ~/.backups dir
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -27,12 +30,9 @@ else
 endif
 
 " Prepend ~/.backup to backupdir so that Vim will look for that directory
-" before littering the current dir with backups.
-" You need to do "mkdir ~/.backup" for this to work.
 set backupdir^=~/.backup
-"
-" Also use ~/.backup for swap files. The trailing // tells Vim to incorporate
-" full path into swap file names.
+
+" Also use ~/.backup for swap files. Trailing // includes full path
 set dir^=~/.backup//
 
 "set no search highlighting
@@ -50,7 +50,7 @@ nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 
-" strip trailing whitespace 
+" strip trailing whitespace
 
 function! <SID>StripTrailingWhitespaces()
   if !&binary && &filetype != 'diff'
@@ -60,4 +60,4 @@ function! <SID>StripTrailingWhitespaces()
   endif
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,vim autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
