@@ -8,13 +8,13 @@ set shiftwidth=8
 set noexpandtab
 set cindent
 
-""since python seems stubborn
-"filetype plugin on
-"filetype indent on
-"augroup python
-"    autocmd!
-"    autocmd FileType python setlocal ts=8 sts=8 sw=8 noet
-"augroup end
+"since python seems stubborn
+filetype plugin on
+filetype indent on
+augroup python
+    autocmd!
+    autocmd FileType python setlocal ts=4 sts=4 sw=8 noet
+augroup end
 
 
 "Backups - Keep backups in the ~/.backups dir
