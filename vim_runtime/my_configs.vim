@@ -50,8 +50,14 @@ nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 
-" strip trailing whitespace
+""" LINUX KERNEL STYLE SETTINGS
 
+" 80 characters line
+set colorcolumn=81
+"execute "set colorcolumn=" . join(range(81,335), ',')
+highlight ColorColumn ctermbg=Black ctermfg=DarkRed
+
+" strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   if !&binary && &filetype != 'diff'
     let l:save = winsaveview()
@@ -60,4 +66,12 @@ function! <SID>StripTrailingWhitespaces()
   endif
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python,vim autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+" set properties of indentations
+set tabstop=8 
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
+set cindent
+
