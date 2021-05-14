@@ -16,3 +16,10 @@ seth () {
 		echo $1 > ~/.hwdir
 	fi
 }
+
+######### C2 configs ###############
+#sync local changes with clac (sync-mine)
+alias sm='echo "Are you sure" && read && rsync -avz ~/cs4995/ clac:~/cs4995/'
+
+#sync remote changes with clac (sync-theirs) (use with caution)
+alias st='echo "Are you sure" && read && rsync -avz clac:~/cs4995/ ~/cs4995/'
