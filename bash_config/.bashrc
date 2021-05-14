@@ -129,8 +129,9 @@ export EDITOR=vim
 export GIT_PS1_SHOWDIRTYSTATE=1
 yellow=$(tput setaf 3) # \e[36m
 red=$(tput setaf 1) # \e[36m
+green=$(tput setaf 2) # \e[36m
 reset=$(tput sgr0)   # \e[0m
-export PS1='\u@\H \[$yellow\]\w\[$reset\] \[$red\]$(__git_ps1 "(%s)")\[$reset\]\$ '
+export PS1='\[$green\]\u@\H\[$reset\] \[$yellow\]\w\[$reset\] \[$red\]$(__git_ps1 "(%s)")\[$reset\]\$ '
 
 
 #terminal 256 color
