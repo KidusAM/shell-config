@@ -2,11 +2,11 @@
 set number
 
 " indentation linux kernel style
-set tabstop=8
-set softtabstop=8
-set shiftwidth=8
-set noexpandtab
-set cindent
+" set tabstop=8
+" set softtabstop=8
+" set shiftwidth=8
+" set noexpandtab
+" set cindent
 
 "since python seems stubborn
 filetype plugin on
@@ -69,9 +69,9 @@ endfun
 autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " set properties of indentations
-set tabstop=8 
-set softtabstop=8
-set shiftwidth=8
-set noexpandtab
-set cindent
-
+" set tabstop=8 
+" set softtabstop=8
+" set shiftwidth=8
+" set noexpandtab
+" set cindent
+" 
