@@ -50,7 +50,6 @@ nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 
-""" LINUX KERNEL STYLE SETTINGS
 
 " 80 characters line
 set colorcolumn=81
@@ -69,9 +68,7 @@ endfun
 autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " set properties of indentations
-" set tabstop=8 
-" set softtabstop=8
-" set shiftwidth=8
-" set noexpandtab
-" set cindent
-" 
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab

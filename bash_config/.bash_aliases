@@ -2,10 +2,6 @@
 alias gs='git status'
 
 
-######## OS configs ##################
-#run checkpatch
-alias checkpatch='git diff 7af064634 | perl scripts/checkpatch.pl --ignore FILE_PATH_CHANGES,SPDX_LICENSE_TAG'
-
 #easy cd-ing into the current hw dir
 HWDIR="$(cat ~/.hwdir)"
 
