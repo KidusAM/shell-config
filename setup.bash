@@ -26,9 +26,15 @@ cp bash_config/.bashrc ~/.bashrc
 
 
 if [ -f ~/.bash_aliases ]; then
-	mv .bash_aliases ~/.bash_aliases.bak
+	mv ~/.bash_aliases ~/.bash_aliases.bak
 fi
 cp bash_config/.bash_aliases ~/.bash_aliases
 
+# setup git prompt
+cp ./bash_config/git-prompt.sh ~/.git-prompt.sh
+
+
+# source the final script
+source ~/.bashrc
 
 echo "DONE"

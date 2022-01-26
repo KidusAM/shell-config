@@ -123,7 +123,7 @@ export EDITOR=vim
 
 
 #Completion script for git use from git sourcecode
-#. ~/.git-prompt.sh
+source ~/.git-prompt.sh
 
 #set some useful git additions and personalize the prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
